@@ -6,34 +6,34 @@ import { cn } from "@/lib/utils";
 
 const experiences = [
     {
-        year: "2023 - Present",
-        role: "Full Stack AI Developer & SaaS Architect",
-        company: "Freelance / Independent",
-        description: "Building white-label SaaS solutions using Next.js, Vibe Coding, and AI agents. Integrating RAG (Retrieval Augmented Generation) for intelligent document processing.",
+        year: "2023 - Presente",
+        role: "Desarrollador Full Stack IA & Arquitecto SaaS",
+        company: "Freelance / Independiente",
+        description: "Creando soluciones SaaS de marca blanca utilizando Next.js, Vibe Coding y agentes de IA. Integrando RAG (Retrieval Augmented Generation) para el procesamiento inteligente de documentos.",
         type: "dev",
         skills: ["Next.js", "OpenAI API", "Vector DB", "Docker", "Stripe"]
     },
     {
         year: "2018 - 2023",
         role: "Senior Product Manager",
-        company: "Major Tech Corp (Placeholder)",
-        description: "Led the digital transformation strategy. Managed a cross-functional team of 15+ developers and designers. Reduced time-to-market by 40% through Agile process optimization.",
+        company: "Empresa Tech Mayor (Placeholder)",
+        description: "Lideré la estrategia de transformación digital. Gestioné un equipo multifuncional de más de 15 desarrolladores y diseñadores. Reduje el time-to-market en un 40% mediante la optimización de procesos Ágiles.",
         type: "pm",
-        skills: ["Product Strategy", "Scrum", "JIRA", "Stakeholder Mgmt", "User Research"]
+        skills: ["Estrategia de Producto", "Scrum", "JIRA", "Gestión de Stakeholders", "User Research"]
     },
     {
         year: "2015 - 2018",
-        role: "Product Owner & Solution Architect",
+        role: "Product Owner & Arquitecto de Soluciones",
         company: "Fintech Startup",
-        description: "Defined roadmap for payments platform. Bridged the gap between business requirements and technical implementation. Implemented BPMN workflows.",
+        description: "Definí el roadmap para la plataforma de pagos. Uniendo la brecha entre los requisitos de negocio y la implementación técnica. Implementé flujos de trabajo BPMN.",
         type: "hybrid",
-        skills: ["Bonita BPM", "SQL", "API Design", "User Stories", "Roadmapping"]
+        skills: ["Bonita BPM", "SQL", "Diseño de API", "Historias de Usuario", "Roadmapping"]
     },
     {
         year: "2012 - 2015",
-        role: "Business Intelligence Analyst / Dev",
-        company: "Retail Group",
-        description: "Developed automated dashboards using Pentaho BI. Optimized ETL processes to reduce data latency. Early adopter of data-driven decision making.",
+        role: "Analista de Business Intelligence / Dev",
+        company: "Grupo Retail",
+        description: "Desarrollé dashboards automatizados utilizando Pentaho BI. Optimicé procesos ETL para reducir la latencia de datos. Adopción temprana de toma de decisiones basada en datos.",
         type: "dev",
         skills: ["Pentaho", "ETL", "Data Warehousing", "Java", "SQL"]
     }
@@ -42,9 +42,9 @@ const experiences = [
 export default function Experience() {
     return (
         <section className="py-20 bg-background relative overflow-hidden">
-            <div className="container px-4 md:px-6">
+            <div className="container mx-auto px-4 md:px-6">
                 <h2 className="text-3xl font-bold tracking-tight mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                    10+ Years of <span className="text-purple-500">Evolution</span>
+                    10+ Años de <span className="text-brand">Evolución</span>
                 </h2>
 
                 <div className="relative max-w-4xl mx-auto pl-8 sm:pl-0">
@@ -64,15 +64,15 @@ export default function Experience() {
                             )}
                         >
                             {/* Dot */}
-                            <div className="absolute left-0 sm:left-1/2 w-8 h-8 rounded-full bg-background border-2 border-purple-500 z-10 flex items-center justify-center transform -translate-x-1/2 sm:translate-x-[-50%] ml-4 sm:ml-0">
-                                {exp.type === "dev" && <Code className="w-4 h-4 text-purple-500" />}
+                            <div className="absolute left-0 sm:left-1/2 w-8 h-8 rounded-full bg-background border-2 border-brand z-10 flex items-center justify-center transform -translate-x-1/2 sm:translate-x-[-50%] ml-4 sm:ml-0">
+                                {exp.type === "dev" && <Code className="w-4 h-4 text-brand" />}
                                 {exp.type === "pm" && <Briefcase className="w-4 h-4 text-blue-500" />}
                                 {exp.type === "hybrid" && <Rocket className="w-4 h-4 text-orange-500" />}
                             </div>
 
                             {/* Content Card */}
                             <div className={cn(
-                                "w-full sm:w-[calc(50%-2rem)] p-6 rounded-xl border border-border bg-card hover:border-purple-500/50 transition-colors ml-12 sm:ml-0",
+                                "w-full sm:w-[calc(50%-2rem)] p-6 rounded-xl border border-border bg-card hover:border-brand/50 transition-colors ml-12 sm:ml-0",
                                 index % 2 === 0 ? "sm:mr-auto" : "sm:ml-auto"
                             )}>
                                 <div className="flex items-center gap-2 mb-2 text-sm text-muted-foreground">
@@ -80,7 +80,7 @@ export default function Experience() {
                                     {exp.year}
                                 </div>
                                 <h3 className="text-xl font-bold mb-1">{exp.role}</h3>
-                                <p className="text-purple-400 mb-3 text-sm font-medium">{exp.company}</p>
+                                <p className="text-brand/80 mb-3 text-sm font-medium">{exp.company}</p>
                                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                                     {exp.description}
                                 </p>

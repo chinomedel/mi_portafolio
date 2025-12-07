@@ -32,6 +32,8 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --color-brand: hsl(var(--brand));
 }
 
 /* 
@@ -42,6 +44,9 @@
 
 @layer base {
   :root {
+    --brand: 185 62% 45%;
+    /* #2cb1bc */
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -74,6 +79,9 @@
   }
 
   .dark {
+    --brand: 185 62% 45%;
+    /* #2cb1bc - consistent in dark/light or adjust if needed */
+
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 

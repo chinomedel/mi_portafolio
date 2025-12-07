@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nelson Medel | Digital Product Manager & AI Developer",
-  description: "Portfolio of Nelson Medel - Bridging the gap between Product Vision and Intelligent Execution.",
+  title: "Nelson Medel | Product Manager Digital & Desarrollador IA",
+  description: "Portafolio de Nelson Medel - Uniendo la Visión de Producto con la Ejecución Inteligente.",
 };
+
+import ThemePicker from "@/components/theme-picker";
+import ChatInterface from "@/components/chat-interface";
 
 export default function RootLayout({
   children,
@@ -25,8 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-500`}
       >
+        <ThemePicker />
+        <ChatInterface />
         {children}
       </body>
     </html>
